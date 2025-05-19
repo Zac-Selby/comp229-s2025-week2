@@ -8,18 +8,31 @@ export default function Projects() {
             <br />
 
             <h2>AI-Based Meeting Summarizer</h2>
-
+            <p>
+                An intelligent tool designed to automatically summarize virtual or in-person meetings using natural language processing. This project helps streamline communication and makes meeting content more accessible for people with attention or memory challenges.
+            </p>
+            <img src="src\assets\Meeting Summarizer pic.webp" alt="logo" width={200}/>
             <br />
 
             <h2>Meal Kit Subscription Database</h2>
-
+            <p>
+                A structured relational database project for managing a meal kit subscription service. Designed with scalability and user personalization in mind, this project showcases my skills in data modeling, SQL, and backend logic for dynamic customer services.
+            </p>
+            <img src="src\assets\meal kit delivery pic.webp" alt="logo" width={200}/>
             <br />
 
             <h2>Daily Task Assistant for Neurodivergent Individuals</h2>
-
+            <p>
+                A productivity assistant tailored to support users with ADHD, autism, or other neurodivergent traits. Built with a focus on reminders, customizable scheduling, and mood-friendly task management to help users navigate their day with less friction.
+            </p>
+            <img src="src\assets\daily task assistant pic.jpg" alt="logo" width={200}/>
             <br />
 
             <h2>Wearable Ultrasonic Obstacle Detection Device</h2>
+            <p>
+                A hardware-software hybrid system that uses ultrasonic sensors to detect nearby obstacles and alert visually impaired users through haptic feedback. This project combines assistive hardware with AI-based signal processing for real-time safety support.
+            </p>
+            <img src="src\assets\obsticle detection pic 2.jpg" alt="logo" width={200}/>
         </>
     )
 }
