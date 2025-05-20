@@ -4,7 +4,19 @@
     StudentID: 301464729
     Date: 2025-05-20
 */}
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+    // use javascript to navigate to the home page after form submission
+    // might need to put this in a javascript file
+
+    const navigate = useNavigate();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        navigate("/");
+    }
+
     return (
         <>
             <h1>Contact Me</h1>
@@ -27,27 +39,27 @@ export default function Contact() {
             </div>
             <br /><br />
 
-            <form id="contactForm">
+            <form id="contactForm" onSubmit={handleSubmit}>
                 <h1>Contact Form</h1>
                 <br />
-                <label for="firstName">First Name:</label>
+                <label htmlFor="firstName">First Name: </label>
                 <input type="text" id="firstName" name="firstName" required />
                 <br /><br />
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" />
+                <label htmlFor="lastName">Last Name: </label>
+                <input type="text" id="lastName" name="lastName" required />
                 <br /><br />
 
-                <label for="email">Email:</label>
+                <label htmlFor="email">Email: </label>
                 <input type="email" id="email" name="email" required />
                 <br /><br />
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" />
+                <label htmlFor="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" required />
                 <br /><br />
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label htmlFor="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required />
                 <br /><br />
 
                 <button type="submit">Send</button>
