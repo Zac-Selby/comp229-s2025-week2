@@ -1,3 +1,9 @@
+{/* 
+    Filename: App.jsx
+    Student Name: Zac Selby
+    StudentID: 301464729
+    Date: 2025-05-19
+*/}
 import './App.css'
 import MainRouter from './MainRouter'
 

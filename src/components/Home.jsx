@@ -1,3 +1,9 @@
+{/* 
+    Filename: Home.jsx
+    Student Name: Zac Selby
+    StudentID: 301464729
+    Date: 2025-05-19
+*/}
 export default function Home() {
     return (
         <>
