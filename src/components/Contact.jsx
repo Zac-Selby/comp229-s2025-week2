@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
     // use javascript to navigate to the home page after form submission
-    // might need to put this in a javascript file
+    // might need to put this in a seperate javascript file
 
     const navigate = useNavigate();
 
