@@ -9,6 +9,8 @@ export default function About() {
         <>
             <div id="smalldiv">
                 <h1>About Me</h1>
+                <img src="src\assets\Zac Selby.jpg" alt="Picture of me" width={200}/>
+                <br />
                 <p>
                     Hi, I’m Zac Selby, a student in the Artificial Intelligence Software Engineering Technology program at Centennial College. My journey into tech is driven by a strong desire to make a difference—specifically, by building AI-powered tools that support and empower individuals with disabilities.
                 </p>
