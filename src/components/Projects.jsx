@@ -19,7 +19,7 @@ export default function Projects() {
                     <p>
                         An intelligent tool designed to automatically summarize virtual or in-person meetings using natural language processing. This project helps streamline communication and makes meeting content more accessible for people with attention or memory challenges.
                     </p>
-                    <img src="src\assets\Meeting Summarizer pic.webp" alt="Meeting summerizer picture" width={200}/>
+                    <img src="/assets/Meeting Summarizer pic.webp" alt="Meeting summerizer picture" width={200}/>
                 </div>
                 <br />
 
@@ -28,7 +28,7 @@ export default function Projects() {
                     <p>
                         A structured relational database project for managing a meal kit subscription service. Designed with scalability and user personalization in mind, this project showcases my skills in data modeling, SQL, and backend logic for dynamic customer services.
                     </p>
-                    <img src="src\assets\meal kit delivery pic.webp" alt="Meal kit delivery picture" width={200}/>
+                    <img src="/assets/meal kit delivery pic.webp" alt="Meal kit delivery picture" width={200}/>
                 </div>
                 <br />
 
@@ -37,7 +37,7 @@ export default function Projects() {
                     <p>
                         A productivity assistant tailored to support users with ADHD, autism, or other neurodivergent traits. Built with a focus on reminders, customizable scheduling, and mood-friendly task management to help users navigate their day with less friction.
                     </p>
-                    <img src="src\assets\daily task assistant pic.jpg" alt="daily task assistant picture" width={200}/>
+                    <img src="/assets/daily task assistant pic.jpg" alt="daily task assistant picture" width={200}/>
                 </div>
                 <br />
 
@@ -46,7 +46,7 @@ export default function Projects() {
                     <p>
                         A hardware-software hybrid system that uses ultrasonic sensors to detect nearby obstacles and alert visually impaired users through haptic feedback. This project combines assistive hardware with AI-based signal processing for real-time safety support.
                     </p>
-                    <img src="src\assets\obsticle detection pic 2.jpg" alt="Obsticle detection picture" width={200}/>
+                    <img src="/assets/obsticle detection pic 2.jpg" alt="Obsticle detection picture" width={200}/>
                 </div>
             </div>
         </>

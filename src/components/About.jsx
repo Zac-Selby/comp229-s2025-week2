@@ -9,7 +9,7 @@ export default function About() {
         <>
             <div id="smalldiv">
                 <h1>About Me</h1>
-                <img src="src\assets\Zac Selby.jpg" alt="Picture of me" width={200}/>
+                <img src="/assets/Zac Selby.jpg" alt="Picture of me" width={200}/>
                 <br />
                 <p>
                     Hi, I’m Zac Selby, a student in the Artificial Intelligence Software Engineering Technology program at Centennial College. My journey into tech is driven by a strong desire to make a difference—specifically, by building AI-powered tools that support and empower individuals with disabilities.
@@ -21,7 +21,7 @@ export default function About() {
                     When I am not coding or experimenting with new AI models, I enjoy learning about user-centred design, exploring innovative assistive tech, and collaborating on solutions that can make everyday life easier for others.
                 </p>
                 <p>
-                    Feel free to view my resume <a href="src\components\Z Selby Resume.pdf" target="_blank" rel="noopener noreferrer">here (PDF)</a> and connect with me to chat about projects, collaborate, or just share ideas!
+                    Feel free to view my resume <a href="/assets/Z Selby Resume.pdf" target="_blank" rel="noopener noreferrer">here (PDF)</a> and connect with me to chat about projects, collaborate, or just share ideas!
                 </p>
             </div>  
         </>
