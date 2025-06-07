@@ -13,7 +13,7 @@ export const getAllContacts = async (req, res) => {
 //Read contact by ID
 export const getContactByID = async (req, res) => {
     try {
-        const contact = await ContactModel.find(req.params.id);
+        const contact = await ContactModel.findById(req.params.id);
         if (!contact) {
             return res.status(404).json({ message: "Contact not found" });
         }
@@ -37,7 +37,7 @@ export const createContact = async (req, res) => {
 //Update a contact by ID
 export const updateContact = async (req, res) => {
     try {
-        const updatedContact = await newContact.findbyIdAndUpdate(
+        const updatedContact = await ContactModel.findByIdAndUpdate(
             req.params.id,
             req.body,
             { new: true, runValidators: true }
@@ -54,7 +54,7 @@ export const updateContact = async (req, res) => {
 //Delete a contact by ID
 export const deleteContact = async (req, res) => {
     try {
-        const deletedContact = await ContactModel.findbyIdAndDelete(req.params)
+        const deletedContact = await ContactModel.findByIdAndDelete(req.params.id)
         if (!deletedContact) {
             return res.status(404).json({ message: "Contact not found" });
         }

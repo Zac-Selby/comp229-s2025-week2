@@ -13,7 +13,7 @@ export const getAllUsers = async (req, res) => {
 //Read user by ID
 export const getUserByID = async (req, res) => {
     try {
-        const users = await UserModel.find(req.params.id);
+        const users = await UserModel.findById(req.params.id);
         if (!users) {
             return res.status(404).json({ message: "User not found" });
         }
@@ -37,7 +37,7 @@ export const createUser = async (req, res) => {
 //Update a user by ID
 export const updateUser = async (req, res) => {
     try {
-        const updatedUser = await newUser.findbyIdAndUpdate(
+        const updatedUser = await UserModel.findByIdAndUpdate(
             req.params.id,
             req.body,
             { new: true, runValidators: true }
@@ -54,7 +54,7 @@ export const updateUser = async (req, res) => {
 //Delete a user by ID
 export const deleteUser = async (req, res) => {
     try {
-        const deletedUser = await UserModel.findbyIdAndDelete(req.params)
+        const deletedUser = await UserModel.findByIdAndDelete(req.params.id)
         if (!deletedUser) {
             return res.status(404).json({ message: "User not found" });
         }
