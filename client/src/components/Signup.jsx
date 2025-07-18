@@ -4,9 +4,11 @@ import { useNavigate } from 'react-router-dom';
 export default function Signup() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        username: '',
+        name: '',
         email: '',
-        password: ''
+        password: '',
+        created: new Date().toISOString(),
+        updated: new Date().toISOString()
     });
 
     const handleChange = (e) => {
@@ -16,17 +18,22 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:3000/api/auth/signup', {
+            const res = await fetch('http://localhost:3000/api/user', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
 
-            if (!res.ok) throw new Error('Signup failed');
+            if (!res.ok) {
+                const errorData = await res.json().catch(() => ({}));
+                const errorMsg = errorData.message || 'Signup failed';
+                throw new Error(errorMsg);
+            }
             alert("Signup successful! You can now sign in.");
             navigate('/signin');
         } catch (err) {
             alert("Error: " + err.message);
+            console.error("Signup error:", err);
         }
     };
 
@@ -34,8 +41,8 @@ export default function Signup() {
         <>
             <h1>Signup</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Name:</label>
-                <input type="text" id="username" name="username" required onChange={handleChange} />
+                <label htmlFor="name">Name:</label>
+                <input type="text" id="name" name="name" required onChange={handleChange} />
                 <br /><br />
 
                 <label htmlFor="email">Email:</label>
