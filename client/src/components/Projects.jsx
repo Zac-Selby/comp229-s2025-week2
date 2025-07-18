@@ -6,33 +6,49 @@
 */}
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const getRole = () => localStorage.getItem('role');
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const userRole = localStorage.getItem('userRole');
+    const navigate = useNavigate();
 
-  useEffect(() => {
+useEffect(() => {
     fetch("http://localhost:3000/api/projects")
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error("Failed to fetch projects:", err));
   }, []);
 
-  return (
+return (
     <div id="smalldiv">
-      <h1>Projects</h1>
-      {projects.map((project) => (
-        <div key={project._id}>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <p><strong>Technologies:</strong> {project.technologies.join(", ")}</p>
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
-          <hr />
-        </div>
-      ))}
+        <h1>Projects</h1>
+
+        {userRole === 'admin' && (
+            <button onClick={() => navigate('/admin/add-project')}>
+                Add Project
+            </button>
+        )}
+
+
+        {projects.map((project) => (
+            <div key={project._id}>
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+                <p><strong>Technologies:</strong> {project.technologies?.join(", ")}</p>
+                {project.githubLink && (
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+                )}
+                <hr />
+            </div>
+         ))}
     </div>
   );
 }
 
+// Old version of Projects component
 /*export default function Projects() {
     return (
         <>

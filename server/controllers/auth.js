@@ -22,10 +22,11 @@ export const signin = async (req, res) => {
       token,
       user: {
         id: user._id,
-        username: user.username,
+        username: user.username,  // <-- use this field name from your DB
         role: user.role
       }
     });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Education() {
   const [education, setEducation] = useState([]);
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem('token');
+  const navigate = useNavigate();
+  const userRole = localStorage.getItem('userRole');
 
   useEffect(() => {
     const fetchEducation = async () => {
@@ -27,6 +30,15 @@ export default function Education() {
 
   return (
     <div id="smalldiv">
+      <h1>Education</h1>
+
+        {userRole === 'admin' && (
+            <button onClick={() => navigate('/admin/add-education')}>
+                Add Education
+            </button>
+        )}
+
+
       <h1>Education History</h1>
       {loading ? (
         <p>Loading...</p>
