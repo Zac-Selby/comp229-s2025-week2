@@ -43,20 +43,20 @@ export default function ProjectForm() {
     <>
       <h1>Add Project</h1>
       <form onSubmit={handleSubmit}>
-        <label>Title:</label>
-        <input type="text" name="title" required onChange={handleChange} />
+        <label htmlFor="title">Title:</label>
+        <input id="title" type="text" name="title" required onChange={handleChange} />
         <br /><br />
 
-        <label>Description:</label>
-        <textarea name="description" required onChange={handleChange}></textarea>
+        <label htmlFor="description">Description:</label>
+        <textarea id="description" name="description" required onChange={handleChange}></textarea>
         <br /><br />
 
-        <label>Technologies (comma separated):</label>
-        <input type="text" name="technologies" onChange={handleChange} />
+        <label htmlFor="technologies">Technologies (comma separated):</label>
+        <input id="technologies" type="text" name="technologies" onChange={handleChange} />
         <br /><br />
 
-        <label>GitHub Link:</label>
-        <input type="text" name="githubLink" onChange={handleChange} />
+        <label htmlFor="githubLink">GitHub Link:</label>
+        <input id="githubLink" type="text" name="githubLink" onChange={handleChange} />
         <br /><br />
 
         <button type="submit">Save</button>
