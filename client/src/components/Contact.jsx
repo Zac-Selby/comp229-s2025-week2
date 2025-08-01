@@ -25,7 +25,7 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http:localhost:3000/api/contact', {
+            const response = await fetch('https://comp229-s2025-week2-az4k.onrender.com/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

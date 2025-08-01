@@ -22,7 +22,7 @@ export default function ProjectForm() {
     };
 
     try {
-      const res = await fetch('http://localhost:3000/api/projects', {
+      const res = await fetch('https://comp229-s2025-week2-az4k.onrender.com/api/projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

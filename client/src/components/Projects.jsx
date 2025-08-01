@@ -16,7 +16,7 @@ export default function Projects() {
     const navigate = useNavigate();
 
 useEffect(() => {
-    fetch("http://localhost:3000/api/projects")
+    fetch("https://comp229-s2025-week2-az4k.onrender.com/api/projects")
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error("Failed to fetch projects:", err));

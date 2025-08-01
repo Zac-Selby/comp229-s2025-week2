@@ -19,7 +19,7 @@ export default function EducationForm() {
         const token = localStorage.getItem('token');
 
         try {
-            const res = await fetch('http://localhost:3000/api/education', {
+            const res = await fetch('https://comp229-s2025-week2-az4k.onrender.com/api/education', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

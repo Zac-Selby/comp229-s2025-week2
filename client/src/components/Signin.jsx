@@ -15,7 +15,7 @@ export default function Signin() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:3000/api/auth/signin', {
+            const res = await fetch('https://comp229-s2025-week2-az4k.onrender.com/api/auth/signin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)

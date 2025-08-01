@@ -11,7 +11,7 @@ export default function Education() {
   useEffect(() => {
     const fetchEducation = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/education', {
+        const res = await fetch('https://comp229-s2025-week2-az4k.onrender.com/api/education', {
           headers: {
             Authorization: `Bearer ${token}`
           }
