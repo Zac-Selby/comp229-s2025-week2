@@ -21,6 +21,9 @@ export default function About() {
                     When I am not coding or experimenting with new AI models, I enjoy learning about user-centred design, exploring innovative assistive tech, and collaborating on solutions that can make everyday life easier for others.
                 </p>
                 <p>
+                    I believe that technology should be accessible to everyone, and I am committed to using my skills to help bridge the gap for those who face barriers in their daily lives.
+                </p>
+                <p>
                     Feel free to view my resume <a href="/assets/Z Selby Resume.pdf" target="_blank" rel="noopener noreferrer">here (PDF)</a> and connect with me to chat about projects, collaborate, or just share ideas!
                 </p>
             </div>  
